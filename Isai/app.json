@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Isai",
+    "slug": "isai-music-player",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1DB954"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppleMusicUsageDescription": "This app needs access to your music library to play your downloaded songs.",
+        "UIBackgroundModes": ["audio"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1DB954"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.WAKE_LOCK",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-media-library",
+      "expo-av",
+      [
+        "react-native-track-player",
+        {
+          "enableBackgroundAudio": true
+        }
+      ]
+    ]
+  }
+}
